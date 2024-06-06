@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="widht-device-widht, initial-scale=1.0">
+    <title>PORTOFOLIO_WEBSITE</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <script src="https://kit.fontawesome.com/4b8c0c3fa7.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <section class="testimonials">
+        <div class="testimonials-box">
+            <h2 class="heading">KELOMPOK 1</h2>
+
+            <div class="wrapper">
+                <div class="testimonials-item">
+                    <img src="4.png" alt="">
+                    <h2>Ahmad Thobroni</h2>
+                    <div class="rating">
+                        <a href="https://wa.me/6283129296498" target="_blank"><i class='bx bxl-whatsapp' id="logo"></i></a>
+                        <a href="https://www.tiktok.com/@d.blender" target="_blank"><i class='bx bxl-tiktok' id="logo"></i></box-icon></a>
+                        <a href="https://www.instagram.com/thobroni354" target="_blank"><i class='bx bxl-instagram' id="logo"></i></box-icon></a>
+                    </div>
+                    <p class="prbh">Asal Sekolah : Sman 1 Praya</p>
+                    <p class="prbh">Posisi : Ketua Kelompok</p>
+                    <p class="prbh">No Absen : 02</p>
+                    <p class="prbh">kelas : X.7</p>
+                </div>
+
+                <div class="testimonials-item">
+                    <img src="1.png" alt="">
+                    <h2>Adrian Pratama</h2>
+                    <div class="rating">
+                        <a href="#" target="_blank"><i class='bx bxl-whatsapp' id="logo"></i></a>
+                        <a href="#"><i class='bx bxl-tiktok' id="logo"></i></box-icon></a>
+                        <a href="#"><i class='bx bxl-instagram' id="logo"></i></box-icon></a>
+                    </div>
+                    <p class="prbh">Asal Sekolah : Sman 1 Praya</p>
+                    <p class="prbh">Posisi : Anggota</p>
+                    <p class="prbh">No Absen : 01</p>
+                    <p class="prbh">kelas : X.7</p>
+                </div>
+                
+                <div class="testimonials-item">
+                    <img src="2.png" alt="">
+                    <h2>Aktania Hardianti</h2>
+                    <div class="rating">
+                        <a href="https://wa.me/+6287814718172" target="_blank"><i class='bx bxl-whatsapp' id="logo"></i></a>
+                        <a href="https://www.tiktok.com/@akta_nia" target="_blank"><i class='bx bxl-tiktok' id="logo"></i></box-icon></a>
+                        <a href="https://www.instagram.com/@akta_nia" target="_blank"><i class='bx bxl-instagram' id="logo"></i></box-icon></a>
+                    </div>
+                    <p class="prbh">Asal Sekolah : Sman 1 Praya</p>
+                    <p class="prbh">Posisi : Anggota</p>
+                    <p class="prbh">No Absen : 03</p>
+                    <p class="prbh">kelas : X.7</p>
+                </div>
+
+                <div class="testimonials-item">
+                    <img src="3.png" alt="">
+                    <h2>Aulia Hanifa</h2>
+                    <div class="rating">
+                        <a href="https://wa.me/+6287758228101" target="_blank"><i class='bx bxl-whatsapp' id="logo"></i></a>
+                        <a href="https://www.tiktok.com/imyourhnii" target="_blank"><i class='bx bxl-tiktok' id="logo"></i></box-icon></a>
+                        <a href="https://www.instagram.com/auliahaniifa" target="_blank"><i class='bx bxl-instagram' id="logo"></i></box-icon></a>
+                    </div>
+                    <p class="prbh">Asal Sekolah : Sman 1 Praya</p>
+                    <p class="prbh">Posisi : Anggota</p>
+                    <p class="prbh">No Absen : 05</p>
+                    <p class="prbh">kelas : X.7</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="bungkus">
+            <div class="music-player">
+            <nav class="mms">
+                <div class="teman">
+                    <i class="fa-solid fa-angle-left"></i>
+                </div>
+                <div class="teman">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+            </nav>
+            <img src="walker1.jpg" class="song-img">
+            <h1>Alone</h1>
+            <p>Alan Walker</p>
+
+            <audio id="song">
+                <source src="alan.mp3" type="audio/mpeg">
+            </audio>
+            <input type="range" value="0" id="progres">
+
+            <div class="controls">
+                <div><i class="fa-solid fa-backward"></i></div>
+                <div onclick="playPause()"><i class="fa-solid fa-play"></i></div>
+                <div><i class="fa-solid fa-forward"></i></div>
+            </div>
+
+            </div>
+        </div>
+
+        <script>
+            let progres = document.getElementById("progres");
+            let song = document.getElementById("song");
+            let ctrlIcon = document.getElementById("progres");
+
+            song.onloadedmetadata = function(){
+                progres.max = song.duration;
+                progres.value = song.currentTime;
+            }
+
+            function playPause(){
+                if(ctrlIcon.classList.contains("fa-pause")){
+                    song.pause();
+                    ctrlIcon.classList.remove("fa-pause");
+                    ctrlIcon.classList.add("fa-play");
+                }
+                else{
+                    song.play();
+                    ctrlIcon.classList.add("fa-pause");
+                    ctrlIcon.classList.remove("fa-play");
+                }
+            }
+
+            if(song.play()){
+                setInterval(()=>{
+                    progres.value = song.currentTime
+                },500);
+            }
+            progres.onchange = function(){
+                song.play();
+                song.currentTime = progres.value;
+                ctrlIcon.classList.add("fa-pause");
+                ctrlIcon.classList.remove("fa-play");
+            }
+
+        </script>
+    </section>
+
+    <header class="header">
+        <a href="#home" class="logo">Ahmad<span>_Thobroni.354</span></a>
+
+        <i class='bx bx-menu' id="menu-icon"></i>
+
+        <nav class="navbar">
+            <a href="#home" class="active">Dashboard</a>
+            <a href="#education">Pendidikan</a>
+            <a href="#hobby">Hobi</a>
+            <a href="#Team">Profil Tim</a>
+            <a href="#contact">Hubungi</a>
+        </nav>
+    </header>
+
+    <section class="home" id="home">
+        <div class="home-content">
+            <h1>Hai, saya<span> Thobroni</span></h1>
+            <h3 class="text-animation">Saya <span></span></h3>
+            <p class="isi">Dari SMAN 1 Praya yang saat ini sedang aktif dalam pembuatan proyek web. Melalui proyek ini, saya mengembangkan keterampilan dalam pemrograman dan desain web, sekaligus mempelajari pentingnya kolaborasi dan pemecahan masalah. Pengalaman ini telah memperkuat minat saya di bidang teknologi informasi dan memotivasi saya untuk terus belajar dan berinovasi. Saya bersemangat untuk menerapkan pengetahuan dan keterampilan yang telah saya peroleh dalam proyek ini di kesempatan yang lebih luas di masa depan.</p>
+
+            <div class="social-icons">
+                <a href="https://wa.me/6283129296498" target="_blank"><i class='bx bxl-whatsapp'></i></a>
+                <a href="https://www.tiktok.com/@d.blender" target="_blank"><i class='bx bxl-tiktok'></i></box-icon></a>
+                <a href="https://www.instagram.com/thobroni354" target="_blank"><i class='bx bxl-instagram'></i></box-icon></a>
+                <a href="https://x.com/AhmadThobroni7" target="_blank"><i class='bx bxl-twitter' ></i></a>
+            </div>
+            <div class="btn-group">
+                <a href="https://whatsapp.com/channel/0029VaOY7BRAe5VlYPwHVh27" target="_blank" class="btn">kata - Kata Hari Ini</a>
+                <a href="#contact" class="btn">Hubungi</a>
+            </div>
+        </div>
+            <div class="home-img">
+                <img src="4.png" alt="">
+            </div>
+    </section>
+
+    <section class="education" id="education">
+        <h2 class="heading">Pendidikan</h2>
+
+        <div class="timeline-items">
+            
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                    <div class="timeline-date">2013</div>
+                    <div class="timeline-content">
+                        <h3>TAMAN KANAK- KANAK</h3>
+                        <P>Saya menempuh pendidikan mulai dari TK. nama TK saya adalah TK PGRI, yang berlokasi di Lombok Tengah. TK ini merupakan pendidikan awal bagi saya dalam menempuh jenjang pendidikan berikutnya. Semasa saya bersekolah disana saya sangat merasakan kebahagian saya sekolah disana selama 1 tahun .</P>
+                    </div>
+                
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                    <div class="timeline-date">2014</div>
+                    <div class="timeline-content">
+                        <h3>SEKOLAH DASAR</h3>
+                        <P>Setelah lulus dari Tk pada tahun 2014 saya melanjutkan sekolah ke jenjang berikutnya yaitu Sekolah Dasar yang bernama SDN Prayitna. Tidak jauh berbeda selama menempuh pelajaran di sana saya merasa sangat bahagia. saya menempuh pendidikan disana selama 6 tahun Kemudaian lulus pada tahun 2020.<P>
+                    </div>
+                
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                    <div class="timeline-date">2020</div>
+                    <div class="timeline-content">
+                        <h3>SEKOLAH MENENGAH PERTAMA</h3>
+                        <P>Setelah lulus pada tahun 2020 saya melanjutkan sekolah ke jenjang yang lebih tinggi yaitu Sekolah Menengah Pertama nama sekolah saya adalah SMPN 2 Praya. Tidak jauh berbeda dari jenjang jenjang sebelumnya saya juga merasa bahagia sekolah disana karena pada dasarnya siswa harus bahagia untuk menjadi lebih dari hari kemarin. Saya lulus dari sekolah ini pada tahun 2023 banyak prestasi akademik yang saya peroleh semasa sekolah disini.</P>
+                    </div>
+                
+            </div>
+        
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                    <div class="timeline-date">2023</div>
+                    <div class="timeline-content">
+                        <h3>SEKOLAH MENENGAH ATAS</h3>
+                        <P>Setelah lulus dari SMP saya melanjutkan sekolah ke jenjang berikutnya yaitu Sekolah Mengah Atas, saya sekolah di SMAN 1 Praya yaitu slaah satu dari sekolah unggulan yang ada di kab. Lombok tengah. Saya juga sangat merasa bahagia sekolah disini</P>
+                    </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <section class="services" id="hobby">
+        <h2 class="heading">Hobi</h2>
+
+        <div class="services-container">
+            <div class="service-box">
+                <div class="service-info">
+                    <h4>BERMAIN BOLA</h4>
+                    <p>Sejak kecil, bola menjadi sahabat setia,Lapangan hijau, tempat kegembiraan tak terkira,Setiap tendangan, setiap dribel, membawa suka cita,Dalam tim, rasa persahabatan dan kerja sama terasa nyata.</p>
+                </div>
+            </div>
+
+            <div class="service-box">
+                <div class="service-info">
+                    <h4>BERSEPEDA</h4>
+                    <p>Sejak kecil, bersepeda membawa kebebasan. Angin yang menyapa dan sejuknya pepohonan membuat setiap kayuhan menjadi irama yang tak terhentikan. Petualangan dimulai di setiap jalan yang dilalui, melintasi bukit dan melewati lembah yang indah.</p>
+                </div>
+            </div>
+        
+            <div class="service-box">
+                <div class="service-info">
+                    <h4>BERMAIN GAME</h4>
+                    <p>Bermain game adalah bagian penting dalam hidupku. Setiap kali aku mengambil kontroler, aku terjun ke dalam dunia fantasi yang penuh petualangan. Dibalik layar, kode-kode kompleks membentuk dunia virtual yang menarik. </p>
+                </div>
+            </div>
+        
+            <div class="service-box">
+                <div class="service-info">
+                    <h4>BADMINTON</h4>
+                    <p>Badminton adalah hobi yang sangat kusukai. Setiap kali saya memegang raket, saya merasa hidup penuh dengan semangat dan energi. Lapangan yang hijau dan bersih menjadi tempat di mana saya menemukan kedamaian dan kebahagiaan.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="testimonials" id="Team">
+        <div class="testimonials-box">
+            <h2 class="heading">Profil Tim</h2>
+
+            <div class="wrapper">
+                <div class="testimonials-item">
+                    <img src="1.png" alt="">
+                    <h2>Adrian Pratama</h2>
+                    <div class="rating">
+                        <i class='bx bxs-id-card' id="star"></i>
+                    </div>
+                    <p>Nama saya Adrian keseharian saya adalah bermain bola, voly dan game .saya orangnya tidak pantang menyerah ,memiliki jiwa  pemimpin, memiliki mental yang kuat, tidak takut bersalah dan selalu mematuhi orang tua. Saya juga orang nya aktif dalam bidang olahraga karena olahraga adalah aktivitas yg saya lakukan setiap hari seperti runing, bermain voly.</p>
+                </div>
+
+                <div class="testimonials-item">
+                    <img src="2.png" alt="">
+                    <h2>Aktania Hardianti</h2>
+                    <div class="rating">
+                        <i class='bx bxs-id-card' id="star"></i>
+                    </div>
+                    <p>Nama sy Aktania Hardianti umur sy 16 tahun sy memiliki kepribadian yg pendiam, hobi sy membaca,kegiatan sehari-hari sy belajar, bantu ortu dll. Saya semangat untuk mengahadapi tantangan baru di sekolah dan berusaha untuk mencapai prestasi yg baik dalam belajar. Saya juga berusaha untuk menjadi siswa yg bertanggung jawab dan bekerja kerja</p>
+                </div>
+                
+                <div class="testimonials-item">
+                    <img src="3.png" alt="">
+                    <h2>Aulia Hanifa</h2>
+                    <div class="rating">
+                        <i class='bx bxs-id-card' id="star"></i>
+                    </div>
+                    <p>Nama saya Aulia Hanifa, untuk sehari-hari biasanya dipanggil hanifa.Hobi saya banyak mulai dari membaca buku, menonton film, rebahan, saya juga terkadang berolahraga.kegiatan sehari-hari saya diawali dengan pergi sekolah, di sekolah saya belajar dan mengikuti kegiatan osis,sepulang sekolah saya biasanya istirahat terlebih dahulu, kemudian membantu orang tua.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="contact" id="contact">
+        <h2 class="heading">Hubungi <span>Kami</span></h2>
+
+        <form action="">
+            <div class="input-group">
+                <div class="input-box">
+                    <input type="text" placeholder="Nama Lengkap">
+                    <input type="email" placeholder="Email">
+                </div>
+                <div class="input-box">
+                    <input type="number" placeholder="Nomor Hp">
+                    <input type="text" 
+                    placeholder="Kepada">
+                </div>
+            </div>
+
+            <div class="input-group-2">
+                <textarea name="" id="" cols="30" rows="10" placeholder="Tulis Pesan"></textarea>
+                <input type="submit" value="Kirim Pesan" class="btn">
+            </div>
+        </form>
+    </section>
+
+    <footer class="footer">
+        <div class="social">
+            <a href="https://wa.me/+6283129296498"><i class='bx bxl-whatsapp'></i></a>
+            <a href="https://github.com/RoniThob" target="_blank"><i class='bx bxl-github'></i></box-icon></a>
+            <a href="https://www.instagram.com/thobroni354" target="_blank"><i class='bx bxl-instagram' ></i></box-icon></a>
+            <a href="https://x.com/AhmadThobroni7" target="_blank"><i class='bx bxl-twitter' ></i></a>
+        </div>
+       
+        <ul class="list">
+            <li>
+                <a href="#">FAQ</a>
+            </li>
+
+            <li>
+                <a href="#">Services</a>
+            </li>
+
+            <li>
+                <a href="#">About Me</a>
+            </li>
+
+            <li>
+                <a href="#">Contact</a>
+            </li>
+
+            <li>
+                <a href="#">Team</a>
+            </li>
+        </ul>
+        <p class="copyright">
+            © Ahmad Thobroni | All Rights Reserved
+        </p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
