@@ -699,7 +699,7 @@ timeline-item{
 
 @media(max-width:1285px){
     html{
-        font-size: 55%;
+        font-size: 53%;
     }
     .services-container{
         padding-bottom: 7rem;
@@ -750,10 +750,10 @@ timeline-item{
         top: 100%;
         right: 0;
         width: 50%;
-        padding: 1rem 3%;
+        padding: 1rem 2%;
         background: rgba(0, 0, 0, 0.8);
         backdrop-filter: blur(20px);
-        border-bottom-left-radius: 2rem;
+        border-bottom-left-radius: 1rem;
         border-left: 2px solid yellow;
         border-bottom: 2px solid yellow;
         display: none;
